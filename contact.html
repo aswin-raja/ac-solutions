@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thermozone Limited</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <script type="text/javascript" src="./assets/js/index.js"></script>
+
+   </head>
+   <body>
+<!-- #Main Div -->
+<div class="container-fluid main-div">
+    <!-- #Side Bar -->
+     <div class="sidebar" id="sidebar">
+        <i class="bi bi-x close-button" onclick="toggleSide()"></i>
+        <h3>Thermozone</h3>
+        <hr>
+        <a href="./index.html" class="nav-text"><p>Home</p></a> 
+        <hr>
+       <a href="./service.html" class="nav-text"><p>Services</p></a> 
+        <hr>
+        <a href="./contact.html" class="nav-text"><p>Contact Us</p></a> 
+        <hr>
+     </div>
+     <!-- #Side Bar End -->
+
+     <!-- #Header -->
+     <div class="header row">
+      <div class="col-sm-4 col-1 hamburgur">
+         <i class="bi bi-list" onclick="toggleSidebar()"></i>
+      </div>
+      <div class="col-sm-4 col-1 facebook-icon">
+         <a href="https://www.facebook.com/thermozoneltd" class="nav-text"><i class="bi bi-facebook"></i></a>
+      </div>
+      <div class="col-sm-4 col-11 headerst">
+         <!-- <h2 class="header-title">THERMOZONE LIMITED</h2>
+               <h3 class="sub-header-title">AIR CONDITIONING & REFRIGERATION</h3> -->
+         <img src="./assets/images/logo.jpeg" class="logo-img">
+      </div>
+      <div class="col-sm-4  phone">
+         <a href="tel:+64 021 148 5706" class="nav-text"><i class="bi bi-telephone-fill"></i> 021 148 5706</a>
+      </div>
+   </div>
+   
+<!-- #Header End -->
+
+     <!-- #Navigation Bar -->
+     <nav class="navbar  navbar-expand-lg ">
+        <div class="collapse  navbar-collapse justify-content-center  " id="navbarSupportedContent">
+           <ul class="navbar-nav mb-lg-0 ">
+              <li class="nav-item">
+                 <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="./service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+           </ul>
+        </div>
+     </nav>
+      <!-- #Navigation Bar End -->
+       <!-- #Content Div Start -->
+       <div class="content">
+
+<!-- Contact Form -->
+<section>
+   <p class="section-title text-center">Get a Free Quote</p>
+    <form class="form">
+        <div class="form-group">
+            
+            <input type="text" class="form-control"  placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="text" class="form-control"  placeholder="E-Mail" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Phone" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="text" class="form-control"  placeholder="Address" required>
+          </div>
+          <div class="form-group">
+           
+            <input type="text" class="form-control"  placeholder="Mobile" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control"  placeholder="How Can We Help" required></textarea>
+          </div>
+          <div class="submit-button d-flex justify-content-center">
+          <button type="submit" class="submit-btn ">Send</button>
+        </div>
+    </form>
+</section>
+<!-- Contact Form End-->
+
+<!-- Subscribe -->
+<section>
+   <p class="section-title text-center">Subscribe</p>
+   <form  class="form">
+      
+      <div class="row subscribe">
+         <div class="col-sm-9 col-xs-12 d-flex justify-content-center">
+         <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your E-Mail Address" required>
+      </div>
+      <div class=" col-sm-3 col-xs-12 subscribe-button d-flex justify-content-center">
+         <button type="submit" class="subscribe-btn">Sign Up</button>
+      </div>
+       </div>
+       
+        
+       
+  </form>
+</section>
+<!-- Subscribe End -->
+
+
+<!-- Emergency -->
+<section>
+   <p class="section-title text-center">24 Hour Emergency Service Available</p>
+   <p class="emergency-description">We strive to be in constant communication with our customers until the job is done. If you have questions or special requests, just drop us a line. To get a free quote, or for emergency service, please contact us at your convenience. We look forward to serving you!</p>
+       </div>
+       
+        
+       
+  </form>
+</section>
+<!-- Subscribe End -->
+
+
+</div>
+<!-- #Content End  -->
+ <!-- #Chat Form -->
+ <div class="chatform" id="chatform"  style="display: none;">
+   <div class="d-flex chat-header">
+    <h3>Thermozone</h3>
+    <i class="bi bi-x chat-close-button" onclick="chatformOpen()"></i>
+    
+ </div>
+    <hr>
+    <form class="chat-form">
+       <div class="form-group">
+           
+           <input type="text" class="form-control" id="inputAddress" placeholder="Name" required>
+         </div>
+         <div class="form-group">
+           
+           <input type="text" class="form-control" id="inputAddress" placeholder="E-Mail" required>
+         </div>
+         <div class="form-group">
+          <textarea class="form-control" id="inputAddress" placeholder="How Can We Help" required></textarea>
+        </div>
+        <div class="submit-button d-flex justify-content-center">
+        <button type="submit" class=" chat-submit-btn ">Send</button>
+      </div>
+  </form>
+ </div>
+ <!-- #Chat Form End -->
+   <div class="chat"><i  id="chatIcon" onclick="chatformOpen()" class="bi bi-chat-dots"></i></div> 
+              <!-- #Footer -->
+         <div class="row footer">
+            <span class="footer-head">THERMOZONE</span>
+            <span class="footer-head"> HOURS: MON-FRI 9AM TO 5PM OR BY APPOINTMENT</span>
+            <div class=" col-sm-4 footer-links" >
+               <img src="./assets/images/logo.jpeg" class="footer-logo">
+            </div>
+            <div class="col-sm-4 footer-address">
+               <div >
+                  <p class="footer-link-head">Contact</p>
+                  <p class="footer-text">Thermozone</p>
+                  <p class="footer-text">Newzealand</p>
+                  <a href="mailto:info@thermozone.co.nz" class="text-decoration"><p class="footer-text"><i class="bi bi-envelope-at"></i>info@thermozone.co.nz </p></a>
+                  <a href="tel:+64 021 148 5706" class="text-decoration"><i class="bi bi-telephone-outbound"> </i> 021 148 5706</p> </a>
+               </div>
+            </div>
+            <div class=" col-sm-4 footer-links" >
+               <div >
+                  <p class="footer-link-head">Quick Links</p>
+                  <a href='./index.html' class="text-decoration"><p class="footer-text">Home</p></a>
+                  <a href='./service.html' class="text-decoration"><p class="footer-text">Services</p></a>
+                  <a href='./contact.html' class="text-decoration"><p class="footer-text">Contact us</p></a>
+                  <a href="https://www.facebook.com/thermozoneltd" class="text-decoration"><p class="footer-text"><i class="bi bi-facebook"></i>thermozoneltd</p></a>
+               </div>
+            </div>
+         </div>
+         <!-- #Footer End -->
+    </div>
+    <!-- #Main Div End -->
+ </body>
+</html>
