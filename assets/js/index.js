@@ -87,38 +87,27 @@ function emailSend() {
 //   "mobile": "04652-260511"
 // };
 
-
-
-  // Call the sendEmail function with the data
   sendEmail(data);
 }
-//  function contactemailSend() {
-//   const name = document.getElementById("contact_name").value;
-//   const email = document.getElementById("contact_email").value;
-//   const message = document.getElementById("contact_message").value;
-//   const phone = document.getElementById("contact_phone").value;
-//   const address = document.getElementById("contact_address").value;
-//   const mobile = document.getElementById("contact_mobile").value;
+ function contactemailSend() {
+  const name = document.getElementById("contact_name").value;
+  const email = document.getElementById("contact_email").value;
+  const message = document.getElementById("contact_message").value;
+  const phone = document.getElementById("contact_phone").value;
+  const address = document.getElementById("contact_address").value;
+  const mobile = document.getElementById("contact_mobile").value;
 
-//   const data = {
-//     name: name,
-//     email: email,
-//     message: message,
-//     phone:phone,
-//     address:address,
-//     mobile:mobile
-//   };
+  const data = {
+    name: name,
+    email: email,
+    message: message,
+    phone:phone,
+    address:address,
+    mobile:mobile
+  };
 
-// //     const data = {
-// //   "name": "Test",
-// //   "email": "test@gmail.com",
-// //   "message": "Test Message",
-// //   "phone": "8098436516",
-// //   "mobile": "04652-260511"
-// // }
-
-//    sendEmail(data);
-// }
+   sendEmail(data);
+}
 
 async function sendEmail(data) {
   const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev';
@@ -133,7 +122,6 @@ async function sendEmail(data) {
       body: JSON.stringify(data),
     });
 
-  
 
     const responseData = await response.json();
 
@@ -145,7 +133,7 @@ async function sendEmail(data) {
   } catch (error) {
     console.error(error);
     alert('Error sending email: ' + error.message);
-    // Handle errors here
+ 
   }
 }
 
