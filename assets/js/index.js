@@ -69,15 +69,23 @@ function chatformOpen() {
 
 
 function emailSend() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  // const name = document.getElementById("name").value;
+  // const email = document.getElementById("email").value;
+  // const message = document.getElementById("message").value;
 
-  const data = {
-    name: name,
-    email: email,
-    message: message
-  };
+  // const data = {
+  //   name: name,
+  //   email: email,
+  //   message: message
+  // };
+
+    const data = {
+  "name": "Test",
+  "email": "test@gmail.com",
+  "message": "Test Message",
+  "phone": "8098436516",
+  "mobile": "04652-260511"
+};
 
 
 
