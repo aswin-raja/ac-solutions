@@ -93,7 +93,7 @@ function emailSend() {
   sendEmail(data);
 }
 
-function sendEmail(data) {
+ async function sendEmail(data) {
   const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev'; // Your API endpoint
   console.log(data, 'inside');
 
