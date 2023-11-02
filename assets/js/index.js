@@ -95,27 +95,25 @@ function emailSend() {
 
 function sendEmail(data) {
   const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev'; // Your API endpoint
-console.log(data,'inside')
-  fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: data
-    })
-  .then(response => {
+  console.log(data, 'inside');
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    return response.json();
-  })
-  .then(data => {
-    alert('Email sent successfully:', data);
-    
-  })
-  .catch(error => {
-    alert('Error sending email:', error);
-    // Handle errors here
-  });
-}
 
+    const responseData = await response.json();
+    alert('Email sent successfully: ' + JSON.stringify(responseData));
+  } catch (error) {
+    alert('Error sending email: ' + error.message);
+    // Handle errors here
+  }
+}
