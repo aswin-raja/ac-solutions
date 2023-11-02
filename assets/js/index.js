@@ -93,10 +93,8 @@ console.log(data,'inside')
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      body: JSON.stringify(data)
+    body: JSON.stringify(data)
     })
-  })
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
