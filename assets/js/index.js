@@ -92,9 +92,36 @@ function emailSend() {
   // Call the sendEmail function with the data
   sendEmail(data);
 }
+ function contactemailSend() {
+  const name = document.getElementById("contact_name").value;
+  const email = document.getElementById("contact_email").value;
+  const message = document.getElementById("contact_message").value;
+  const phone = document.getElementById("contact_phone").value;
+  const address = document.getElementById("contact_address").value;
+  const mobile = document.getElementById("contact_mobile").value;
 
- async function sendEmail(data) {
-  const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev'; // Your API endpoint
+  const data = {
+    name: name,
+    email: email,
+    message: message,
+    phone:phone,
+    address:address,
+    mobile:mobile
+  };
+
+//     const data = {
+//   "name": "Test",
+//   "email": "test@gmail.com",
+//   "message": "Test Message",
+//   "phone": "8098436516",
+//   "mobile": "04652-260511"
+// }
+
+   sendEmail(data);
+}
+
+async function sendEmail(data) {
+  const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev';
   console.log(data, 'inside');
 
   try {
@@ -103,8 +130,7 @@ function emailSend() {
       headers: {
         'Content-Type': 'application/json'
       },
-     body: JSON.stringify(data),
-
+      body: JSON.stringify(data),
     });
 
     if (!response.ok) {
@@ -112,9 +138,16 @@ function emailSend() {
     }
 
     const responseData = await response.json();
-    alert('Email sent successfully: ' + JSON.stringify(responseData));
+
+    if (responseData.statusCode === 200) {
+      alert('Email sent successfully');
+    } else {
+      alert('Email not sent successfully');
+    }
   } catch (error) {
+    console.error(error);
     alert('Error sending email: ' + error.message);
     // Handle errors here
   }
 }
+
