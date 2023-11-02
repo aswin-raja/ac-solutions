@@ -101,7 +101,7 @@ console.log(data,'inside')
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data)
+    body: data
     })
   .then(response => {
     if (!response.ok) {
