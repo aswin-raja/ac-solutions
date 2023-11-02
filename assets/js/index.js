@@ -103,7 +103,8 @@ function emailSend() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: data
+      body: data,
+     credentials: 'include' 
     });
 
     if (!response.ok) {
