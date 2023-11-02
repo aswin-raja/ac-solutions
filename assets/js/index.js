@@ -79,15 +79,14 @@ function emailSend() {
     message: message
   };
 
-  // Display an alert with the data
-  alert(JSON.stringify(data));
+
 
   // Call the sendEmail function with the data
   sendEmail(data);
 }
 
 function sendEmail(data) {
-  const apiUrl = 'https://bzhrg7hn6a.execute-api.us-east-1.amazonaws.com/dev/contactus'; // Your API endpoint
+  const apiUrl = 'https://ezp9wr8del.execute-api.us-east-1.amazonaws.com/dev'; // Your API endpoint
 console.log(data,'inside')
   fetch(apiUrl, {
     method: 'POST',
